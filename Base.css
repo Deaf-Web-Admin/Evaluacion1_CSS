@@ -15,10 +15,6 @@ header {
     height: 10vh;
     text-align: center;
 }
-nav > ul > li {
-    display: inline;
-    padding: 5px;
-  }
   
 main,article {
     background-color: var(--Color2);
@@ -32,9 +28,13 @@ footer {
     padding: 3vh;
 }
 H1{
-  padding: 1vh;
+    padding: .5vh;
     color:var(--Color4);
 }
+nav > ul > li {
+    display: inline;
+    padding: 4px;
+  }
 a{
     color:var(--Color4);
     text-decoration: none;
@@ -43,6 +43,7 @@ a:hover {
     color: var(--Color4);
     font-size: large;
     font-weight: bolder;
+    padding:1px;
 }
 .embed-container {
     position: relative;
@@ -58,23 +59,33 @@ a:hover {
     height: 100%;
 }
 .animar{
-animation: efectoanimado 2s 4.5;
+    animation: efectoanimado 2s 4.5;
 }
+section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: 300px;   
+    gap: 10px;
+    padding: 10px;
+  }
+  section > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
 @keyframes efectoanimado {
-  0% {
-    opacity: 0.5;
+    0% {
+        opacity: 0.5;
 }
-50% {
-  opacity: 1;
-
+    50% {
+        opacity: 1;
 }
 100% {
-  opacity: 0.5;
+    opacity: 0.5;
 
 }
 }
-
-
 
 /* 320px */
 @media only screen and (min-width: 320px) {
@@ -96,4 +107,3 @@ animation: efectoanimado 2s 4.5;
 @media only screen and (min-width: 1024px) {
     
 }
-/* https://cybmeta.com/como-hacer-un-iframe-responsive#:~:text=B%C3%A1sicamente%20la%20soluci%C3%B3n%20consiste%20en,en%20funci%C3%B3n%20del%20aspect%20ratio. */
